@@ -58,7 +58,7 @@ const Home = () => {
       </section>
 
       <section className="services">
-        <h2>Our Construction Services</h2>
+        <h2>Construction Services</h2>
         <p className="sub">From residential homes to commercial complexes, we provide comprehensive construction solutions tailored to your needs.</p>
         <div className="service-list">
           {services.map((s, i) => (

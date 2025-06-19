@@ -79,6 +79,11 @@
   margin-left: auto;
 }
 
+.company-logo {
+  height: 2.5rem; /* This sets the height */
+  width: auto;   /* This maintains the aspect ratio */
+  /* filter: invert(1); */
+}
 .hamburger span {
   width: 24px;
   height: 2px;
