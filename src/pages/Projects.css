@@ -1,0 +1,185 @@
+/* === Header Section === */
+.project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.1em 1rem 2rem;
+  background-color: #1f2937;
+}
+
+.project-header h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.project-header p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+/* === Filter Buttons === */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.project-filter-btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.project-filter-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.project-filter-btn.active {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Project Grid === */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem 1rem;
+}
+
+/* === Project Card === */
+.project-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 520px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.project-body p {
+  font-size: 0.95rem;
+  color: #555;
+  flex-grow: 1;
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Meta Info */
+.project-meta {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.project-meta div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.project-meta svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  color: #4b5563;
+}
+
+/* Status */
+.project-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.project-status.ongoing {
+  background-color: #f59e0b;
+}
+
+.project-status.completed {
+  background-color: #10b981;
+}
+
+/* Tags */
+.project-tag {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.project-tag.residential {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+}
+
+.project-tag.commercial {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.project-tag.industrial {
+  background-color: #ede9fe;
+  color: #5b21b6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-body h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-body p {
+    max-height: 60px;
+  }
+}

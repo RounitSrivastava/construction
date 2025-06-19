@@ -1,0 +1,273 @@
+.home {
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  background: url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+  text-align: center;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  color: #facc15; /* yellow-400 */
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #e5e7eb;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.btn.primary {
+  background: #facc15;
+  color: #111827;
+}
+
+.btn.primary:hover {
+  background: #eab308;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #facc15;
+  color: #facc15;
+}
+
+.btn.secondary:hover {
+  background: #facc15;
+  color: #111827;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+/* STATS SECTION */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background: #111827;
+  color: #fff;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-icon {
+  margin-bottom: 0.5rem;
+  color: #facc15;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  color: #d1d5db;
+}
+
+/* SERVICES SECTION */
+.services {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sub {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: #f3f4f6;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-body {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.service-body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service-body p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+.center {
+  margin-top: 2rem;
+}
+
+/* CTA SECTION */
+.cta {
+  background: #1f2937;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  color: #d1d5db;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .services {
+    padding: 2rem 1rem;
+  }
+
+  .services h2 {
+    font-size: 1.75rem;
+  }
+
+  .sub {
+    font-size: 0.95rem;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-body h3 {
+    font-size: 1.1rem;
+  }
+
+  .cta {
+    padding: 2.5rem 1rem;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta p {
+    font-size: 0.95rem;
+  }
+}

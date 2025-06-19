@@ -1,0 +1,141 @@
+/* src/styles/Careers.css */
+
+.careers {}
+
+.careers-hero {
+  background-color: #1f2937;
+  color: white;
+  padding: 5rem 1rem;
+  position: relative;
+  text-align: center;
+}
+.careers-hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+.careers-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: auto;
+}
+.careers-hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.careers-hero-content p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.careers-why h2,
+.careers-jobs h2,
+.careers-culture h2,
+.careers-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  text-align: center;
+}
+
+.icon-wrapper {
+  background: #f3f4f6;
+  color: #2563eb;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.job-card {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.job-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.apply-btn {
+  background: #2563eb;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+}
+
+.no-openings {
+  color: #9ca3af;
+}
+
+.careers-culture .culture-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.careers-culture img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.careers-cta {
+  background-color: #1f2937;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.careers-cta p {
+  color: #d1d5db;
+  margin-bottom: 2rem;
+}
+.careers-cta button {
+  background: white;
+  color: #1f2937;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.careers-cta button:hover {
+  background: #f3f4f6;
+}
