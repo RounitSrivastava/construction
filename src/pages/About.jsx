@@ -5,25 +5,25 @@ import './About.css'
 const About = () => {
   const directors = [
     {
-      name: 'Ahmed Hassan',
-      position: 'Managing Director & CEO',
+      name: 'Sekh Fakiruddin',
+      position: 'Managing Director',
       image:
         'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'With over 20 years in construction industry, Ahmed leads our company with vision and expertise in delivering world-class construction projects.'
+      bio: 'With over 5 years in construction industry, Sekh leads our company with vision and expertise in delivering world-class construction projects.'
     },
     {
-      name: 'Sarah Mohammed',
-      position: 'Executive Director - Operations',
+      name: 'MD Abdullah Tayab',
+      position: 'Managing Director',
       image:
         'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Sarah oversees all operational aspects ensuring projects are delivered on time and exceed client expectations with her 15+ years of experience.'
+      bio: 'Abdullah oversees all operational aspects ensuring projects are delivered on time and exceed client expectations with her 5+ years of experience.'
     },
     {
-      name: 'Michael Chen',
-      position: 'Technical Director',
+      name: 'SK Lackuddin',
+      position: 'Managing Director',
       image:
         'https://images.pexels.com/photos/2182212/pexels-photo-2182212.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Michael brings innovative engineering solutions and technical expertise to every project, ensuring the highest standards of construction quality.'
+      bio: 'SK brings innovative engineering solutions and technical expertise to every project, ensuring the highest standards of construction quality.'
     }
   ]
 

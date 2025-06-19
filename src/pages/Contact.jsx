@@ -1,4 +1,3 @@
-// Contact.jsx
 import React, { useState } from 'react'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
 import './Contact.css'
@@ -24,8 +23,25 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setTimeout(() => {
-      setIsSubmitting(false)
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key: 'YOUR_ACCESS_KEY_HERE', // 🔁 Replace this with your Web3Forms key
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        subject: formData.service || 'General Inquiry',
+        message: formData.message
+      })
+    })
+
+    const result = await response.json()
+
+    if (result.success) {
       setSubmitStatus('success')
       setFormData({
         name: '',
@@ -35,7 +51,11 @@ const Contact = () => {
         message: ''
       })
       setTimeout(() => setSubmitStatus(''), 5000)
-    }, 2000)
+    } else {
+      setSubmitStatus('error')
+    }
+
+    setIsSubmitting(false)
   }
 
   const contactInfo = [
@@ -70,10 +90,11 @@ const Contact = () => {
         </p>
       </section>
 
-      <section className="contact-main">
+      <section className="contact-main" id="contact-form">
         <div className="contact-form-section">
           <h2>Send Us a Message</h2>
           {submitStatus === 'success' && <div className="success-message">Thank you! We'll reply in 24 hours.</div>}
+          {submitStatus === 'error' && <div className="error-message">Something went wrong. Please try again.</div>}
           <form onSubmit={handleSubmit}>
             <div className="form-row">
               <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name *" required />
@@ -133,7 +154,7 @@ const Contact = () => {
         <p>Contact our expert construction team today and let's turn your vision into reality.</p>
         <div className="cta-buttons">
           <button className="secondary-btn">Schedule Free Consultation</button>
-          <button className="primary-btn">Get Instant Quote</button>
+          <a href="#contact-form" className="primary-btn">Get Instant Quote</a>
         </div>
       </section>
     </div>
