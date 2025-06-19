@@ -1,6 +1,6 @@
 // ./src/pages/Gallery.jsx
 import React from 'react';
-import './gallery.css'; // Import the global CSS file directly
+import styles from './Gallery.module.css'; // Import the CSS module
 
 const galleryImages = [
   {
@@ -31,30 +31,30 @@ const galleryImages = [
 
 export default function Gallery() {
   return (
-    <div className="galleryPage"> {/* Use global class names directly */}
-      <div className="galleryContainer">
-        <div className="headerSection">
-          <h1 className="galleryTitle">Gallery</h1>
-          <p className="galleryDescription">
+    <div className={styles.galleryPage}> {/* Use global class names directly */}
+      <div className={styles.galleryContainer}>
+        <div className={styles.headerSection}>
+          <h1 className={styles.galleryTitle}>Gallery</h1>
+          <p className={styles.galleryDescription}>
             A visual tour of our recent construction milestones and architectural excellence.
           </p>
         </div>
 
-        <div className="imageGrid">
+        <div className={styles.imageGrid}>
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="galleryItem"
+              className={styles.galleryItem}
             >
               {/* This 'imageWrapper' implements the 1:1 aspect ratio using padding-bottom */}
-              <div className="imageWrapper">
+              <div className={styles.imageWrapper}>
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="galleryImage"
+                  className={styles.galleryImage}
                 />
               </div>
-              <div className="imageDescription">
+              <div className={styles.imageDescription}>
                 <p>{image.alt}</p>
               </div>
             </div>
