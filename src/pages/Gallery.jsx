@@ -1,37 +1,34 @@
-// ./src/pages/Gallery.jsx
 import React from 'react';
-import styles from './Gallery.module.css'; // Import the CSS module
+import styles from './Gallery.module.css';
+
+// Importing local images
+import urban from '../assets/IMG_20240531_170734449_HDR_AE.jpg';
+import site from '../assets/IMG_20240618_154134035_HDR_AE.jpg';
+import bridge from '../assets/IMG_20240521_144639146_HDR_AE.jpg';
+import housing from '../assets/IMG_20240706_170042943_HDR_AE.jpg';
+import team from '../assets/WhatsApp Image 2025-06-19 at 11.59.48_9e1f7dec.jpg';
+import crane from '../assets/WhatsApp Image 2025-06-19 at 11.59.49_70bd67c6.jpg';
+import cran from '../assets/WhatsApp Image 2025-06-19 at 11.59.49_a4747011.jpg';
+import cra from '../assets/WhatsApp Image 2025-06-19 at 11.59.50_94c7e0e6.jpg';
+import cr from '../assets/IMG_20240506_101206342_HDR_AE.jpg';
+import c from '../assets/IMG_20240716_205148693.jpg';
 
 const galleryImages = [
-  {
-    src: 'https://images.pexels.com/photos/2092517/pexels-photo-2092517.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Urban Construction'
-  },
-  {
-    src: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Site Planning'
-  },
-  {
-    src: 'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Bridge Framework'
-  },
-  {
-    src: 'https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Modern Housing'
-  },
-  {
-    src: 'https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Team Collaboration'
-  },
-  {
-    src: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Crane Setup'
-  }
+  { src: urban, alt: 'Urban Construction' },
+  { src: site, alt: 'Site Planning' },
+  { src: bridge, alt: 'Bridge Framework' },
+  { src: housing, alt: 'Modern Housing' },
+  { src: team, alt: 'Team Collaboration' },
+  { src: crane, alt: 'Crane Setup 1' },
+  { src: cran, alt: 'Crane Setup 2' },
+  { src: cra, alt: 'Crane Setup 3' },
+  { src: cr, alt: 'Crane Setup 4' },
+  { src: c, alt: 'Crane Setup 5' }
 ];
 
 export default function Gallery() {
   return (
-    <div className={styles.galleryPage}> {/* Use global class names directly */}
+    <div className={styles.galleryPage}>
       <div className={styles.galleryContainer}>
         <div className={styles.headerSection}>
           <h1 className={styles.galleryTitle}>Gallery</h1>
@@ -42,17 +39,9 @@ export default function Gallery() {
 
         <div className={styles.imageGrid}>
           {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className={styles.galleryItem}
-            >
-              {/* This 'imageWrapper' implements the 1:1 aspect ratio using padding-bottom */}
+            <div key={index} className={styles.galleryItem}>
               <div className={styles.imageWrapper}>
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className={styles.galleryImage}
-                />
+                <img src={image.src} alt={image.alt} className={styles.galleryImage} />
               </div>
               <div className={styles.imageDescription}>
                 <p>{image.alt}</p>

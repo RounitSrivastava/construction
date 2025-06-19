@@ -19,7 +19,7 @@ const Footer = () => {
               <span className="footer-title">Umay Construction</span>
             </div>
             <p className="footer-description">
-              Building excellence since 2010. We specialize in residential, commercial, and industrial construction projects with a commitment to quality and innovation.
+              Building excellence since 2018. We specialize in residential, commercial, and industrial construction projects with a commitment to quality and innovation.
             </p>
             <div className="footer-socials">
               <Facebook className="social-icon" />
@@ -46,7 +46,7 @@ const Footer = () => {
             <h3>Contact Info</h3>
             <div className="contact-item">
               <MapPin className="contact-icon" />
-              <span>123 Construction Ave, Building City, BC 12345</span>
+              <span>Mouza-Trijanga, Industrail Area Kalinga Nagar, Jajpur, Odisha, PIN Code: 755026</span>
             </div>
             <div className="contact-item">
               <Phone className="contact-icon" />
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2024 Umay Construction and Solutions. All rights reserved.</p>
+          <p>© 2024 Umay Engineering Solutions Pvt Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
