@@ -2,27 +2,33 @@ import React from 'react'
 import { Award, Target, Eye, Heart } from 'lucide-react'
 import './About.css'
 
+// Import local images for each director.
+// Ensure these image files exist in the specified path: src/assets/pages/
+import sekhFakiruddinImage from "../assets/sekh.jpg";
+import mdAbdullahTayabImage from "../assets/Screenshot_2025-06-21_003748-removebg-preview.png";
+import skLackuddinImage from "../assets/sk.jpg";
+
 const About = () => {
   const directors = [
     {
       name: 'Sekh Fakiruddin',
-      position: 'Managing Director',
-      image:
-        'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+      position: 'Director',
+      // Assign the unique imported image to each director
+      image: sekhFakiruddinImage,
       bio: 'With over 5 years in construction industry, Sekh leads our company with vision and expertise in delivering world-class construction projects.'
     },
     {
       name: 'MD Abdullah Tayab',
-      position: 'Managing Director',
-      image:
-        'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400',
+      position: 'Director',
+      // Assign the unique imported image to each director
+      image: mdAbdullahTayabImage,
       bio: 'Abdullah oversees all operational aspects ensuring projects are delivered on time and exceed client expectations with her 5+ years of experience.'
     },
     {
       name: 'SK Lackuddin',
       position: 'Managing Director',
-      image:
-        'https://images.pexels.com/photos/2182212/pexels-photo-2182212.jpeg?auto=compress&cs=tinysrgb&w=400',
+      // Assign the unique imported image to each director
+      image: skLackuddinImage,
       bio: 'SK brings innovative engineering solutions and technical expertise to every project, ensuring the highest standards of construction quality.'
     }
   ]
@@ -68,16 +74,18 @@ const About = () => {
           <div className="text-content">
             <h2 className="section-title">Our Story</h2>
             <p>
-              Founded in 2010, Umay Construction and Solutions began as a small family business with a big vision: to revolutionize the construction industry through innovation, quality, and unwavering commitment to client satisfaction.
+              Founded in 2018, Umay Engineering Solutions Pvt Ltd began as a small family business with a big vision: to revolutionize the construction industry through innovation, quality, and unwavering commitment to client satisfaction.
             </p>
             <p>
-              Over the past 15 years, we have grown into one of the region's most trusted construction companies, completing over 250 projects ranging from luxury residential homes to large-scale commercial and industrial facilities.
+              Over the past 7 years, we have grown into one of the region's most trusted construction companies, completing over 250 projects ranging from luxury residential homes to large-scale commercial and industrial facilities.
             </p>
             <p>
               Our success is built on a foundation of skilled craftmanship, cutting-edge technology, and a team of dedicated professionals who share our passion for building excellence.
             </p>
           </div>
           <div className="image-container">
+            {/* This image is still from Pexels. If you want to make it a local asset,
+                you'd import it similarly to the director images and update the src. */}
             <img
               src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Construction team"

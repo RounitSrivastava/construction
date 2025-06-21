@@ -13,6 +13,7 @@ import cra from '../assets/WhatsApp Image 2025-06-19 at 11.59.50_94c7e0e6.jpg';
 import cr from '../assets/IMG_20240506_101206342_HDR_AE.jpg';
 import c from '../assets/IMG_20240716_205148693.jpg';
 
+
 const galleryImages = [
   { src: urban, alt: 'Urban Construction' },
   { src: site, alt: 'Site Planning' },
